@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Account | Furfection</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../assets/css/furfection.css">
+</head>
+<body>
+
+    <!-- Top Navbar -->
+    <nav class="fur-nav">
+        <a href="#" class="fur-logo">
+            <i class="fas fa-paw"></i>
+            <div>
+                Furfection<br>
+                <span style="font-size: 11px; font-weight: 500; color: var(--text-muted);">My pet app</span>
+            </div>
+        </a>
+
+        <div class="fur-menu">
+            <a href="#">Categories</a>
+            <a href="#">Exclusive</a>
+            <a href="#">Collections</a>
+            <a href="#">Blogs</a>
+        </div>
+
+        <div class="fur-actions">
+            <div class="fur-action-icon" title="Contact Us">
+                <i class="fas fa-phone-alt"></i>
+            </div>
+            <div class="fur-action-icon" title="Wishlist">
+                <i class="far fa-heart"></i>
+            </div>
+            <div class="fur-action-icon" title="Cart">
+                <i class="fas fa-shopping-bag"></i>
+            </div>
+            <div class="fur-profile">
+                <div class="profile-img">J</div>
+                <span style="font-weight: 500; font-size: 14px;">Hello John</span>
+                <i class="fas fa-chevron-down" style="font-size: 12px; margin-left: 4px; color: var(--text-muted);"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Dashboard Layout -->
+    <main class="dashboard-container">
+        
+        <!-- Left Sidebar -->
+        <aside class="sidebar">
+            <div style="padding: 10px 20px;">
+                <h3 style="font-size: 14px; opacity: 0.8; text-transform: uppercase; letter-spacing: 1px;">Account Menu</h3>
+            </div>
+            <ul class="sidebar-menu">
+                <li><a href="#" class="active"><i class="fas fa-border-all"></i> My Account</a></li>
+                <li><a href="#"><i class="fas fa-box-open"></i> My Orders</a></li>
+                <li><a href="#"><i class="fas fa-map-marker-alt"></i> Address Book</a></li>
+                <li><a href="#"><i class="far fa-user"></i> My Profile</a></li>
+                <li><a href="#"><i class="far fa-life-ring"></i> Help and Support</a></li>
+            </ul>
+            
+            <div style="margin-top: auto; padding: 20px;">
+                <a href="index.html" style="color: rgba(255,255,255,0.7); text-decoration: none; font-size: 14px; display: flex; align-items: center; gap: 10px;">
+                    <i class="fas fa-sign-out-alt"></i> Sign out
+                </a>
+            </div>
+        </aside>
+
+        <!-- Right Content Area -->
+        <section class="content-area">
+            
+            <!-- Greeting -->
+            <div class="greeting-section">
+                <h1>Hello John,</h1>
+                <p>john.doe@example.com</p>
+            </div>
+
+            <!-- Stats Cards -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon"><i class="fas fa-box"></i></div>
+                    <div class="stat-info">
+                        <h3>12</h3>
+                        <p>Orders Placed</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon" style="color: #f39c12; background: rgba(243, 156, 18, 0.1);"><i class="fas fa-shopping-cart"></i></div>
+                    <div class="stat-info">
+                        <h3>3</h3>
+                        <p>Items in Cart</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon" style="color: #e74c3c; background: rgba(231, 76, 60, 0.1);"><i class="fas fa-heart"></i></div>
+                    <div class="stat-info">
+                        <h3>8</h3>
+                        <p>Wishlist Items</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recent Orders Section -->
+            <div class="orders-section">
+                <div class="section-header">
+                    <h2>Recent Orders</h2>
+                    <a href="#" style="color: var(--primary); font-weight: 500; font-size: 14px; text-decoration: none;">View All</a>
+                </div>
+
+                <!-- Order Card 1 -->
+                <div class="order-card">
+                    <div class="order-header">
+                        <div>
+                            <span style="font-weight: 600; font-size: 16px; color: var(--text-main);">Order #FUR-98234</span>
+                            <span style="color: var(--text-muted); font-size: 13px; margin-left: 12px;"><i class="far fa-calendar-alt"></i> Oct 24, 2023 at 14:30</span>
+                        </div>
+                        <span class="badge badge-paid">PAID</span>
+                    </div>
+
+                    <div style="display: flex; gap: 30px; margin-bottom: 20px;">
+                        <div>
+                            <span style="font-size: 12px; color: var(--text-muted); display: block;">Items</span>
+                            <span style="font-weight: 600;">3 Products</span>
+                        </div>
+                        <div>
+                            <span style="font-size: 12px; color: var(--text-muted); display: block;">Total Amount</span>
+                            <span style="font-weight: 600;">$ 145.00</span>
+                        </div>
+                        <div>
+                            <span style="font-size: 12px; color: var(--text-muted); display: block;">Star Rating</span>
+                            <span style="color: #f1c40f;"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></span>
+                        </div>
+                    </div>
+
+                    <!-- Tracker -->
+                    <div class="order-tracker">
+                        <div class="tracker-step completed">
+                            <div class="step-icon"><i class="fas fa-check"></i></div>
+                            <span class="step-label">Placed</span>
+                        </div>
+                        <div class="tracker-step completed">
+                            <div class="step-icon"><i class="fas fa-clipboard-check"></i></div>
+                            <span class="step-label">Accepted</span>
+                        </div>
+                        <div class="tracker-step active">
+                            <div class="step-icon"><i class="fas fa-box-open"></i></div>
+                            <span class="step-label">Packed</span>
+                        </div>
+                        <div class="tracker-step">
+                            <div class="step-icon"><i class="fas fa-shipping-fast"></i></div>
+                            <span class="step-label">Shipped</span>
+                        </div>
+                        <div class="tracker-step">
+                            <div class="step-icon"><i class="fas fa-home"></i></div>
+                            <span class="step-label">Delivered</span>
+                        </div>
+                    </div>
+
+                    <div class="order-footer">
+                        <span style="font-size: 14px; color: var(--text-muted);">Expected Delivery: Oct 28, 2023</span>
+                        <button class="btn-detail">Order Info</button>
+                    </div>
+                </div>
+
+                <!-- Order Card 2 -->
+                <div class="order-card">
+                    <div class="order-header">
+                        <div>
+                            <span style="font-weight: 600; font-size: 16px; color: var(--text-main);">Order #FUR-98110</span>
+                            <span style="color: var(--text-muted); font-size: 13px; margin-left: 12px;"><i class="far fa-calendar-alt"></i> Oct 10, 2023 at 09:15</span>
+                        </div>
+                        <span class="badge badge-cod">COD</span>
+                    </div>
+
+                    <div style="display: flex; gap: 30px; margin-bottom: 20px;">
+                        <div>
+                            <span style="font-size: 12px; color: var(--text-muted); display: block;">Items</span>
+                            <span style="font-weight: 600;">1 Product</span>
+                        </div>
+                        <div>
+                            <span style="font-size: 12px; color: var(--text-muted); display: block;">Total Amount</span>
+                            <span style="font-weight: 600;">$ 45.00</span>
+                        </div>
+                        <div>
+                            <span style="font-size: 12px; color: var(--text-muted); display: block;">Star Rating</span>
+                            <span style="color: #f1c40f;"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
+                        </div>
+                    </div>
+
+                    <!-- Tracker -->
+                    <div class="order-tracker">
+                        <div class="tracker-step completed">
+                            <div class="step-icon"><i class="fas fa-check"></i></div>
+                            <span class="step-label">Placed</span>
+                        </div>
+                        <div class="tracker-step completed">
+                            <div class="step-icon"><i class="fas fa-check"></i></div>
+                            <span class="step-label">Accepted</span>
+                        </div>
+                        <div class="tracker-step completed">
+                            <div class="step-icon"><i class="fas fa-check"></i></div>
+                            <span class="step-label">Packed</span>
+                        </div>
+                        <div class="tracker-step completed">
+                            <div class="step-icon"><i class="fas fa-check"></i></div>
+                            <span class="step-label">Shipped</span>
+                        </div>
+                        <div class="tracker-step completed">
+                            <div class="step-icon"><i class="fas fa-check"></i></div>
+                            <span class="step-label">Delivered</span>
+                        </div>
+                    </div>
+
+                    <div class="order-footer">
+                        <span style="font-size: 14px; color: #2ecc71; font-weight: 500;"><i class="fas fa-check-circle"></i> Delivered on Oct 14, 2023</span>
+                        <button class="btn-detail">Order Info</button>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // Optional JS for sidebar active item toggle
+        document.querySelectorAll('.sidebar-menu a').forEach(link => {
+            link.addEventListener('click', function(e) {
+                if(this.getAttribute('href') === '#') {
+                    e.preventDefault();
+                    document.querySelectorAll('.sidebar-menu a').forEach(el => el.classList.remove('active'));
+                    this.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
