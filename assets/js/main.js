@@ -5,6 +5,7 @@
 
 document.addEventListener('DOMContentLoaded', () => {
     initTheme();
+    initRTL();
     initMobileNav();
     initCart();
     initSearch();
@@ -27,6 +28,34 @@ function initTheme() {
         localStorage.setItem('theme', newTheme);
     });
 }
+
+/**
+ * RTL Layout Management
+ * Toggles right-to-left layout constraints using html[dir]
+ */
+function initRTL() {
+    const rtlToggle = document.querySelector('#rtl-toggle');
+    if (!rtlToggle) return;
+
+    // Load saved RTL preference
+    const isRTL = localStorage.getItem('rtl_layout') === 'true';
+    if (isRTL) {
+        document.documentElement.setAttribute('dir', 'rtl');
+    }
+
+    rtlToggle.addEventListener('click', (e) => {
+        e.preventDefault();
+        const currentlyRTL = document.documentElement.getAttribute('dir') === 'rtl';
+        if (currentlyRTL) {
+            document.documentElement.removeAttribute('dir');
+            localStorage.setItem('rtl_layout', 'false');
+        } else {
+            document.documentElement.setAttribute('dir', 'rtl');
+            localStorage.setItem('rtl_layout', 'true');
+        }
+    });
+}
+
 
 /**
  * Mobile Navigation Logic
