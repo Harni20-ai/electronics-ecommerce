@@ -87,13 +87,27 @@
 </head>
 <body>
 
-    <!-- Header (Minimal) -->
+    <!-- Header Navigation -->
     <header>
         <div class="container nav-container">
             <a href="index.html" class="logo">
                 <i class="fab fa-apple"></i> ElectroPremium
             </a>
-            <a href="index.html" style="font-size: 14px;">Exit</a>
+            
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="shop.html">Shop</a>
+                <a href="shop.html#categories">Categories</a>
+                <a href="deals.html">Deals</a>
+                <a href="blog.html">Blog</a>
+                <a href="account.html" class="active">Account</a>
+            </nav>
+            
+            <div class="nav-actions">
+                <a href="#" id="theme-toggle"><i class="fas fa-moon"></i></a>
+                <a href="cart.html" class="cart-btn"><i class="fas fa-shopping-bag"></i></a>
+                <a href="#" class="burger-menu"><i class="fas fa-bars"></i></a>
+            </div>
         </div>
     </header>
 
@@ -138,6 +152,57 @@
             </p>
         </div>
     </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="index.html" class="logo" style="margin-bottom: 24px; display: block;">
+                        <i class="fab fa-apple"></i> ElectroPremium
+                    </a>
+                    <p style="font-size: 13px; color: var(--text-secondary); max-width: 250px;">
+                        Leading the conversation in premium technology and minimalist design. Founded in 2024.
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h4>Shop</h4>
+                    <ul>
+                        <li><a href="shop.html">Laptops</a></li>
+                        <li><a href="shop.html">Smartphones</a></li>
+                        <li><a href="shop.html">Wearables</a></li>
+                        <li><a href="shop.html">Accessories</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="coming-soon.html">Repair Service</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Account</h4>
+                    <ul>
+                        <li><a href="user-dashboard.html">My Account</a></li>
+                        <li><a href="cart.html">Order Status</a></li>
+                        <li><a href="account.html">Login / Register</a></li>
+                        <li><a href="admin-dashboard.html">Admin Panel</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 ElectroPremium Inc. All rights reserved.</p>
+                <div style="display: flex; gap: 24px;">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Use</a>
+                    <a href="#">Sales Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
 
     <script src="../assets/js/main.js"></script>
 </body>
