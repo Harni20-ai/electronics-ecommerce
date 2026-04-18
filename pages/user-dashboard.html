@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Account | ElectroPremium</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/dark-mode.css">
+    
+    <style>
+        .user-dashboard-grid {
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            gap: 64px;
+            margin-top: 40px;
+        }
+        
+        .user-sidebar {
+            background: white;
+            border-radius: 20px;
+            padding: 24px;
+            height: fit-content;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+            border: 1px solid var(--border-color);
+        }
+        
+        .user-info {
+            text-align: center;
+            padding-bottom: 24px;
+            margin-bottom: 24px;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .user-avatar-large {
+            width: 80px;
+            height: 80px;
+            background: var(--bg-light);
+            border-radius: 50%;
+            margin: 0 auto 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            font-weight: 700;
+            color: var(--accent-color);
+        }
+        
+        .user-sidebar-nav a {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 16px;
+            border-radius: 10px;
+            color: var(--text-secondary);
+            font-size: 15px;
+            margin-bottom: 4px;
+        }
+        
+        .user-sidebar-nav a.active, .user-sidebar-nav a:hover {
+            background: var(--bg-light);
+            color: var(--text-primary);
+        }
+        
+        .dashboard-card {
+            background: white;
+            border-radius: 20px;
+            padding: 32px;
+            border: 1px solid var(--border-color);
+            margin-bottom: 32px;
+        }
+        
+        .order-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 24px 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .order-row:last-child {
+            border-bottom: none;
+        }
+        
+        @media (max-width: 900px) {
+            .user-dashboard-grid {
+                grid-template-columns: 1fr;
+            }
+            .user-sidebar {
+                position: relative;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation (Minimal) -->
+    <header>
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <i class="fab fa-apple"></i> ElectroPremium
+            </a>
+            <div class="nav-actions">
+                <a href="shop.html" style="font-size: 14px;">Shop</a>
+                <a href="cart.html" class="cart-btn"><i class="fas fa-shopping-bag"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <main class="section" style="background: #F5F5F7;">
+        <div class="container">
+            <div class="user-dashboard-grid">
+                <!-- Sidebar -->
+                <aside class="user-sidebar">
+                    <div class="user-info">
+                        <div class="user-avatar-large">JD</div>
+                        <h3 style="font-size: 18px;">John Doe</h3>
+                        <p class="text-secondary" style="font-size: 13px;">john.doe@icloud.com</p>
+                    </div>
+                    
+                    <nav class="user-sidebar-nav">
+                        <a href="#" class="active"><i class="fas fa-th-large"></i> Dashboard</a>
+                        <a href="#"><i class="fas fa-shopping-basket"></i> Orders</a>
+                        <a href="#"><i class="fas fa-heart"></i> Wishlist</a>
+                        <a href="#"><i class="fas fa-user-circle"></i> Profile Settings</a>
+                        <a href="#"><i class="fas fa-map-marker-alt"></i> Addresses</a>
+                        <a href="#"><i class="fas fa-sign-out-alt"></i> Sign Out</a>
+                    </nav>
+                </aside>
+
+                <!-- Content Area -->
+                <div class="user-content">
+                    <div style="margin-bottom: 32px;">
+                        <h1 style="font-size: 32px;">Welcome back, John.</h1>
+                        <p class="text-secondary">Manage your orders, returns, and account settings.</p>
+                    </div>
+
+                    <!-- Recent Orders -->
+                    <div class="dashboard-card">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px;">
+                            <h3 style="font-size: 20px;">Recent Orders</h3>
+                            <a href="#" style="font-size: 14px; color: var(--accent-color);">View all</a>
+                        </div>
+                        
+                        <div class="order-list">
+                            <div class="order-row">
+                                <div style="display: flex; gap: 16px; align-items: center;">
+                                    <div style="width: 48px; height: 48px; background: var(--bg-light); border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                                        <i class="fas fa-laptop" style="color: var(--text-secondary);"></i>
+                                    </div>
+                                    <div>
+                                        <p style="font-weight: 600; font-size: 14px;">Order #EP-8291</p>
+                                        <p class="text-secondary" style="font-size: 12px;">MacBook Pro 14" • Apr 18, 2024</p>
+                                    </div>
+                                </div>
+                                <div style="text-align: right;">
+                                    <p style="font-weight: 600; font-size: 14px;">$1,999.00</p>
+                                    <span class="status-badge completed" style="font-size: 10px;">Shipped</span>
+                                </div>
+                            </div>
+                            
+                            <div class="order-row">
+                                <div style="display: flex; gap: 16px; align-items: center;">
+                                    <div style="width: 48px; height: 48px; background: var(--bg-light); border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                                        <i class="fas fa-mobile-alt" style="color: var(--text-secondary);"></i>
+                                    </div>
+                                    <div>
+                                        <p style="font-weight: 600; font-size: 14px;">Order #EP-8290</p>
+                                        <p class="text-secondary" style="font-size: 12px;">iPhone 15 Pro • Apr 10, 2024</p>
+                                    </div>
+                                </div>
+                                <div style="text-align: right;">
+                                    <p style="font-weight: 600; font-size: 14px;">$999.00</p>
+                                    <span class="status-badge completed" style="font-size: 10px;">Delivered</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Quick Actions -->
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px;">
+                        <div class="dashboard-card" style="margin-bottom: 0;">
+                            <h3 style="font-size: 18px; margin-bottom: 16px;">Saved Items</h3>
+                            <p class="text-secondary" style="font-size: 14px; margin-bottom: 24px;">You have 3 items in your wishlist.</p>
+                            <a href="#" class="btn btn-secondary" style="width: 100%;">View Wishlist</a>
+                        </div>
+                        <div class="dashboard-card" style="margin-bottom: 0;">
+                            <h3 style="font-size: 18px; margin-bottom: 16px;">Account Security</h3>
+                            <p class="text-secondary" style="font-size: 14px; margin-bottom: 24px;">Password last updated 2 months ago.</p>
+                            <a href="#" class="btn btn-secondary" style="width: 100%;">Update Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer style="padding: 40px 0; text-align: center; font-size: 12px; color: var(--text-secondary); background: white; border-top: 1px solid var(--border-color);">
+        <p>&copy; 2024 ElectroPremium. Fast delivery. Free returns.</p>
+    </footer>
+
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>

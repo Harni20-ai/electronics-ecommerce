@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop | ElectroPremium</title>
+    <meta name="description" content="Browse our curated selection of premium electronics. Find the latest laptops, smartphones, and wearables.">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/dark-mode.css">
+    <link rel="stylesheet" href="../assets/css/rtl.css">
+    
+    <style>
+        .shop-container {
+            display: grid;
+            grid-template-columns: 240px 1fr;
+            gap: 40px;
+            margin-top: 40px;
+        }
+        
+        .filters {
+            position: sticky;
+            top: 104px;
+            height: fit-content;
+        }
+        
+        .filter-group {
+            margin-bottom: 32px;
+        }
+        
+        .filter-group h4 {
+            font-size: 14px;
+            text-transform: uppercase;
+            margin-bottom: 16px;
+            color: var(--text-primary);
+        }
+        
+        .checkbox-group {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        
+        .checkbox-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 14px;
+            color: var(--text-secondary);
+            cursor: pointer;
+        }
+        
+        .checkbox-item input {
+            accent-color: var(--accent-color);
+        }
+        
+        .price-range {
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        .category-tabs {
+            display: flex;
+            gap: 20px;
+            overflow-x: auto;
+            padding-bottom: 10px;
+            border-bottom: 1px solid var(--border-color);
+            margin-bottom: 40px;
+        }
+
+        .category-tab {
+            white-space: nowrap;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .category-tab.active {
+            background: var(--primary-color);
+            color: white;
+        }
+        
+        @media (max-width: 768px) {
+            .shop-container {
+                grid-template-columns: 1fr;
+            }
+            .filters {
+                display: none; /* In production, use a mobile filter drawer */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header>
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <i class="fab fa-apple"></i> ElectroPremium
+            </a>
+            
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="shop.html" class="active">Shop</a>
+                <a href="shop.html?cat=categories">Categories</a>
+                <a href="shop.html?cat=deals">Deals</a>
+                <a href="blog.html">Blog</a>
+                <a href="account.html">Account</a>
+            </nav>
+            
+            <div class="nav-actions">
+                <a href="#" id="theme-toggle"><i class="fas fa-moon"></i></a>
+                <a href="#" class="search-btn"><i class="fas fa-search"></i></a>
+                <a href="cart.html" class="cart-btn"><i class="fas fa-shopping-bag"></i></a>
+                <a href="#" class="burger-menu"><i class="fas fa-bars"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <main class="section">
+        <div class="container">
+            <div class="page-header" style="margin-bottom: 40px;">
+                <h1 style="font-size: 48px;">Shop Everything.</h1>
+                <p class="text-secondary">Curated electronics for a modern lifestyle.</p>
+            </div>
+
+            <!-- Category Fast Access -->
+            <div class="category-tabs">
+                <div class="category-tab active">All Products</div>
+                <div class="category-tab">Mac</div>
+                <div class="category-tab">iPhone</div>
+                <div class="category-tab">Watch</div>
+                <div class="category-tab">Audio</div>
+                <div class="category-tab">Accessories</div>
+            </div>
+
+            <div class="shop-container">
+                <!-- Sidebar Filters -->
+                <aside class="filters">
+                    <div class="filter-group">
+                        <h4>Category</h4>
+                        <div class="checkbox-group">
+                            <label class="checkbox-item"><input type="checkbox" checked> All Categories</label>
+                            <label class="checkbox-item"><input type="checkbox"> Laptops</label>
+                            <label class="checkbox-item"><input type="checkbox"> Smartphones</label>
+                            <label class="checkbox-item"><input type="checkbox"> Audio</label>
+                            <label class="checkbox-item"><input type="checkbox"> Wearables</label>
+                        </div>
+                    </div>
+
+                    <div class="filter-group">
+                        <h4>Brand</h4>
+                        <div class="checkbox-group">
+                            <label class="checkbox-item"><input type="checkbox"> Apple</label>
+                            <label class="checkbox-item"><input type="checkbox"> Samsung</label>
+                            <label class="checkbox-item"><input type="checkbox"> Sony</label>
+                            <label class="checkbox-item"><input type="checkbox"> Bose</label>
+                        </div>
+                    </div>
+
+                    <div class="filter-group">
+                        <h4>Price Range</h4>
+                        <input type="range" class="price-range" min="0" max="5000" step="100">
+                        <div style="display: flex; justify-content: space-between; font-size: 12px; margin-top: 8px; color: var(--text-secondary);">
+                            <span>$0</span>
+                            <span>$5,000</span>
+                        </div>
+                    </div>
+                </aside>
+
+                <!-- Product Listing -->
+                <div class="product-listing">
+                    <div class="listing-controls" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px;">
+                        <span style="font-size: 14px; color: var(--text-secondary);">Showing 1–12 of 48 products</span>
+                        <select style="border: none; background: transparent; font-size: 14px; cursor: pointer;">
+                            <option>Sort by: Featured</option>
+                            <option>Price: Low to High</option>
+                            <option>Price: High to Low</option>
+                            <option>Newest Arrivals</option>
+                        </select>
+                    </div>
+
+                    <div class="product-grid">
+                        <!-- Repeated Product Cards -->
+                        <div class="product-card">
+                            <img src="../assets/images/hero-macbook.webp" alt="MacBook Pro" class="product-image">
+                            <div class="product-info">
+                                <span class="category">Computers</span>
+                                <h3>MacBook Pro 14"</h3>
+                                <p class="price">$1,999.00</p>
+                                <a href="product.html" class="btn btn-outline mt-2" style="width: 100%;">Add to Cart</a>
+                            </div>
+                        </div>
+
+                        <div class="product-card">
+                            <img src="../assets/images/product-iphone.webp" alt="iPhone 15 Pro" class="product-image">
+                            <div class="product-info">
+                                <span class="category">Smartphones</span>
+                                <h3>iPhone 15 Pro</h3>
+                                <p class="price">$999.00</p>
+                                <a href="product.html" class="btn btn-outline mt-2" style="width: 100%;">Add to Cart</a>
+                            </div>
+                        </div>
+
+                        <div class="product-card">
+                            <img src="../assets/images/product-watch.webp" alt="Apple Watch" class="product-image">
+                            <div class="product-info">
+                                <span class="category">Wearables</span>
+                                <h3>Apple Watch Ultra</h3>
+                                <p class="price">$799.00</p>
+                                <a href="product.html" class="btn btn-outline mt-2" style="width: 100%;">Add to Cart</a>
+                            </div>
+                        </div>
+
+                        <div class="product-card">
+                            <img src="../assets/images/product-headphones.webp" alt="AirPods Max" class="product-image">
+                            <div class="product-info">
+                                <span class="category">Audio</span>
+                                <h3>AirPods Max</h3>
+                                <p class="price">$549.00</p>
+                                <a href="product.html" class="btn btn-outline mt-2" style="width: 100%;">Add to Cart</a>
+                            </div>
+                        </div>
+
+                        <!-- Duplicate for layout demo -->
+                        <div class="product-card">
+                             <div class="skeleton" style="height: 200px; background: #eee; border-radius: 12px; margin-bottom: 12px;"></div>
+                             <h3>iPad Pro 12.9"</h3>
+                             <p class="price">$1,099.00</p>
+                        </div>
+                        <div class="product-card">
+                             <div class="skeleton" style="height: 200px; background: #eee; border-radius: 12px; margin-bottom: 12px;"></div>
+                             <h3>Mac Studio</h3>
+                             <p class="price">$1,999.00</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Pagination -->
+                    <div class="pagination" style="display: flex; justify-content: center; gap: 8px; margin-top: 64px;">
+                        <a href="#" class="btn btn-secondary" style="width: 40px; height: 40px; padding: 0;">1</a>
+                        <a href="#" class="btn" style="width: 40px; height: 40px; padding: 0;">2</a>
+                        <a href="#" class="btn" style="width: 40px; height: 40px; padding: 0;">3</a>
+                        <a href="#" class="btn" style="width: 40px; height: 40px; padding: 0;"><i class="fas fa-chevron-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer same as index -->
+    <footer>
+        <div class="container">
+            <div class="footer-bottom" style="border: none;">
+                <p>&copy; 2024 ElectroPremium Inc. All rights reserved.</p>
+                <div style="display: flex; gap: 24px;">
+                    <a href="index.html">Home</a>
+                    <a href="contact.html">Support</a>
+                    <a href="about.html">About</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>

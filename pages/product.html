@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MacBook Pro 14" | ElectroPremium</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/dark-mode.css">
+    <link rel="stylesheet" href="../assets/css/rtl.css">
+    
+    <style>
+        .product-detail-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            margin-top: 40px;
+        }
+        
+        .product-gallery {
+            position: sticky;
+            top: 104px;
+            height: fit-content;
+        }
+        
+        .main-image {
+            width: 100%;
+            background: var(--bg-light);
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 20px;
+        }
+        
+        .thumbnail-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+        }
+        
+        .thumbnail {
+            aspect-ratio: 1;
+            background: var(--bg-light);
+            border-radius: 10px;
+            cursor: pointer;
+            border: 2px solid transparent;
+            transition: var(--transition);
+        }
+        
+        .thumbnail.active {
+            border-color: var(--accent-color);
+        }
+        
+        .product-meta .tag {
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--accent-color);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 8px;
+            display: block;
+        }
+        
+        .product-meta h1 {
+            font-size: 48px;
+            margin-bottom: 16px;
+        }
+        
+        .product-meta .price {
+            font-size: 24px;
+            font-weight: 500;
+            margin-bottom: 32px;
+        }
+        
+        .config-group {
+            margin-bottom: 32px;
+        }
+        
+        .config-label {
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            display: block;
+        }
+        
+        .config-options {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+        
+        .config-btn {
+            padding: 12px 20px;
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            background: transparent;
+            font-size: 14px;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .config-btn.active {
+            border-color: var(--accent-color);
+            box-shadow: 0 0 0 1px var(--accent-color);
+        }
+        
+        .specs-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 64px;
+        }
+        
+        .specs-table tr {
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .specs-table td {
+            padding: 24px 0;
+            font-size: 14px;
+        }
+        
+        .specs-table .label {
+            color: var(--text-secondary);
+            width: 200px;
+        }
+        
+        @media (max-width: 900px) {
+            .product-detail-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header>
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <i class="fab fa-apple"></i> ElectroPremium
+            </a>
+            <div class="nav-actions">
+                <a href="shop.html" style="font-size: 14px;"><i class="fas fa-chevron-left"></i> Back to Shop</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="section">
+        <div class="container">
+            <div class="product-detail-grid">
+                <!-- Left: Gallery -->
+                <div class="product-gallery">
+                    <div class="main-image">
+                        <img src="../assets/images/hero-macbook.webp" alt="MacBook Pro" style="width: 100%; height: auto;">
+                    </div>
+                    <div class="thumbnail-grid">
+                        <div class="thumbnail active"></div>
+                        <div class="thumbnail"></div>
+                        <div class="thumbnail"></div>
+                        <div class="thumbnail"></div>
+                    </div>
+                </div>
+
+                <!-- Right: Content -->
+                <div class="product-info-panel">
+                    <div class="product-meta">
+                        <span class="tag">New Arrival</span>
+                        <h1>MacBook Pro 14"</h1>
+                        <p class="text-secondary" style="font-size: 20px; margin-bottom: 16px;">Mind-blowing. Head-turning.</p>
+                        <div class="rating" style="margin-bottom: 24px; color: #FF9F0A;">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span style="color: var(--text-secondary); font-size: 14px; margin-left: 8px;">(128 Reviews)</span>
+                        </div>
+                        <p class="price">$1,999.00</p>
+                    </div>
+
+                    <div class="config-group">
+                        <span class="config-label">Color - Space Gray</span>
+                        <div class="config-options">
+                            <button class="config-btn active" style="background: #3c3c3e; border: none; width: 40px; height: 40px; border-radius: 50%; padding:0;"></button>
+                            <button class="config-btn" style="background: #e3e4e5; border: none; width: 40px; height: 40px; border-radius: 50%; padding:0;"></button>
+                        </div>
+                    </div>
+
+                    <div class="config-group">
+                        <span class="config-label">Chip</span>
+                        <div class="config-options">
+                            <button class="config-btn active">M3 Pro (11-core CPU)</button>
+                            <button class="config-btn">M3 Max (14-core CPU)</button>
+                        </div>
+                    </div>
+
+                    <div class="config-group">
+                        <span class="config-label">Memory</span>
+                        <div class="config-options">
+                            <button class="config-btn">18GB</button>
+                            <button class="config-btn active">36GB</button>
+                            <button class="config-btn">96GB</button>
+                        </div>
+                    </div>
+
+                    <div class="actions" style="display: flex; gap: 16px; margin-top: 48px;">
+                        <a href="cart.html" class="btn btn-primary" style="flex: 1; padding: 16px;">Add to Bag</a>
+                        <button class="btn btn-secondary" style="width: 56px; padding: 0;"><i class="far fa-heart"></i></button>
+                    </div>
+
+                    <div class="short-description mt-5" style="border-top: 1px solid var(--border-color); padding-top: 32px;">
+                        <h4 style="margin-bottom: 16px;">Product Overview</h4>
+                        <p class="text-secondary" style="font-size: 15px; line-height: 1.8;">
+                            The 14-inch MacBook Pro blasts forward with M3 Pro and M3 Max, radically advanced chips that bring even greater performance for extremely demanding workflows. With best-in-class battery life — up to 22 hours — and a beautiful Liquid Retina XDR display, it's a pro laptop without equal. Now in a new color: Space Black.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Detailed Specifications -->
+            <div class="specifications section">
+                <h2 style="font-size: 32px; margin-bottom: 40px;">Deep dive into details.</h2>
+                <table class="specs-table">
+                    <tr>
+                        <td class="label">Display</td>
+                        <td>Liquid Retina XDR display; 14.2-inch (diagonal); 3024-by-1964 native resolution at 254 pixels per inch.</td>
+                    </tr>
+                    <tr>
+                        <td class="label">Processor</td>
+                        <td>Apple M3 Pro chip; 11-core CPU with 6 performance cores and 5 efficiency cores; 14-core GPU.</td>
+                    </tr>
+                    <tr>
+                        <td class="label">Memory</td>
+                        <td>18GB or 36GB unified memory.</td>
+                    </tr>
+                    <tr>
+                        <td class="label">Storage</td>
+                        <td>512GB or 1TB SSD.</td>
+                    </tr>
+                    <tr>
+                        <td class="label">Charging</td>
+                        <td>MagSafe 3 charging port; Three Thunderbolt 4 ports; HDMI port; SDXC card slot; Headphone jack.</td>
+                    </tr>
+                </table>
+            </div>
+
+            <!-- Reviews Section (UI) -->
+            <div class="reviews-section section" style="border-top: 1px solid var(--border-color);">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 40px;">
+                    <h2 style="font-size: 32px;">Customer Reviews</h2>
+                    <button class="btn btn-outline">Write a Review</button>
+                </div>
+                
+                <div class="review-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 32px;">
+                    <div class="review-card" style="background: var(--bg-light); padding: 32px; border-radius: 20px;">
+                        <div class="rating" style="color: #FF9F0A; margin-bottom: 12px;">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <h4 style="margin-bottom: 8px;">Unbelievable Speed</h4>
+                        <p class="text-secondary" style="font-size: 14px; margin-bottom: 16px;">"The transition to M3 Pro is even better than expected. Every app opens instantly."</p>
+                        <span style="font-size: 12px; font-weight: 600;">David R. - Verified Buyer</span>
+                    </div>
+                    <div class="review-card" style="background: var(--bg-light); padding: 32px; border-radius: 20px;">
+                        <div class="rating" style="color: #FF9F0A; margin-bottom: 12px;">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <h4 style="margin-bottom: 8px;">Stunning Display</h4>
+                        <p class="text-secondary" style="font-size: 14px; margin-bottom: 16px;">"The Liquid Retina XDR is just gorgeous. Watching movies and editing photos is a joy."</p>
+                        <span style="font-size: 12px; font-weight: 600;">Sarah M. - Verified Buyer</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer style="background: white;">
+        <div class="container text-center" style="padding: 40px 0;">
+            <p style="font-size: 12px; color: var(--text-secondary);">&copy; 2024 ElectroPremium Inc. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>

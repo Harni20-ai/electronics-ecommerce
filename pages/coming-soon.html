@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coming Soon | ElectroPremium</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/dark-mode.css">
+    
+    <style>
+        .coming-soon-container {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 40px;
+            background: #000;
+            color: white;
+        }
+        
+        .countdown {
+            display: flex;
+            gap: 40px;
+            justify-content: center;
+            margin: 64px 0;
+        }
+        
+        .count-item .number {
+            font-size: 64px;
+            font-weight: 700;
+            display: block;
+        }
+        
+        .count-item .label {
+            font-size: 14px;
+            text-transform: uppercase;
+            opacity: 0.6;
+            letter-spacing: 0.2em;
+        }
+        
+        @media (max-width: 600px) {
+            .countdown { gap: 20px; }
+            .count-item .number { font-size: 32px; }
+        }
+    </style>
+</head>
+<body>
+
+    <main class="coming-soon-container">
+        <div class="container">
+            <a href="index.html" class="logo" style="justify-content: center; margin-bottom: 64px; font-size: 24px;">
+                <i class="fab fa-apple"></i> ElectroPremium
+            </a>
+            
+            <h1 style="font-size: 56px; margin-bottom: 24px;">Something big is coming.</h1>
+            <p style="font-size: 20px; opacity: 0.7;">We're working on something revolutionary. Stay tuned.</p>
+            
+            <div class="countdown">
+                <div class="count-item">
+                    <span class="number">14</span>
+                    <span class="label">Days</span>
+                </div>
+                <div class="count-item">
+                    <span class="number">08</span>
+                    <span class="label">Hours</span>
+                </div>
+                <div class="count-item">
+                    <span class="number">45</span>
+                    <span class="label">Mins</span>
+                </div>
+                <div class="count-item">
+                    <span class="number">12</span>
+                    <span class="label">Secs</span>
+                </div>
+            </div>
+            
+            <form action="#" style="max-width: 500px; margin: 0 auto;">
+                <p style="margin-bottom: 24px; font-size: 14px; opacity: 0.6;">Notify me when we launch</p>
+                <div style="display: flex; gap: 12px;">
+                    <input type="email" placeholder="Email address" style="flex: 1; padding: 16px; border-radius: 12px; border: none; background: #222; color: white;">
+                    <button type="submit" class="btn btn-primary">Notify Me</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+</body>
+</html>

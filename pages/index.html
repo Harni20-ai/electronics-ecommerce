@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ElectroPremium | The Future of Technology</title>
+    <meta name="description" content="Experience the ultimate in premium electronics. From sleek laptops to high-end smartphones, ElectroPremium brings you the future of technology today.">
+    
+    <!-- Open Graph / SEO -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="ElectroPremium | Premium Electronics Store">
+    <meta property="og:description" content="Minimalist, high-performance electronics for the modern professional.">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/dark-mode.css">
+    <link rel="stylesheet" href="../assets/css/rtl.css">
+    
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ElectronicsStore",
+      "name": "ElectroPremium",
+      "description": "Premium electronics store with Apple-inspired design.",
+      "url": "https://electropremium.com",
+      "telephone": "+1800-ELECTRO",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "123 Tech Avenue",
+        "addressLocality": "Cupertino",
+        "addressRegion": "CA",
+        "postalCode": "95014",
+        "addressCountry": "US"
+      }
+    }
+    </script>
+</head>
+<body>
+
+    <!-- Announcement Bar -->
+    <div class="announcement-bar" style="background: var(--primary-color); color: white; text-align: center; font-size: 12px; padding: 8px 0;">
+        Fast, free delivery. And free returns. <a href="shop.html" style="text-decoration: underline; margin-left: 8px;">Shop now</a>
+    </div>
+
+    <!-- Header Navigation -->
+    <header>
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <i class="fab fa-apple"></i> ElectroPremium
+            </a>
+            
+            <nav class="nav-links">
+                <a href="index.html" class="active">Home</a>
+                <a href="shop.html">Shop</a>
+                <a href="shop.html?cat=categories">Categories</a>
+                <a href="shop.html?cat=deals">Deals</a>
+                <a href="blog.html">Blog</a>
+                <a href="account.html">Account</a>
+            </nav>
+            
+            <div class="nav-actions">
+                <a href="#" id="theme-toggle"><i class="fas fa-moon"></i></a>
+                <a href="shop.html" class="search-btn"><i class="fas fa-search"></i></a>
+                <a href="cart.html" class="cart-btn"><i class="fas fa-shopping-bag"></i></a>
+                <a href="#" class="burger-menu"><i class="fas fa-bars"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1 class="animate-up">Think Beyond.</h1>
+            <p class="animate-up" style="animation-delay: 0.1s;">The all-new MacBook Pro. Supercharged by M3.</p>
+            <div class="hero-cta animate-up" style="animation-delay: 0.2s;">
+                <a href="product.html" class="btn btn-primary">Learn more</a>
+                <a href="shop.html" class="btn btn-outline" style="margin-left: 16px;">Buy</a>
+            </div>
+            <div class="hero-image-container mt-4 animate-up" style="animation-delay: 0.3s;">
+                <img src="../assets/images/hero-macbook.webp" alt="MacBook Pro M3" style="width: 100%; max-width: 900px; border-radius: 20px;">
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Selling Points -->
+    <section class="section" style="background: white;">
+        <div class="container">
+            <div class="section-title text-center mb-5">
+                <h2 style="font-size: 40px; margin-bottom: 40px;">Why ElectroPremium?</h2>
+            </div>
+            <div class="grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 40px;">
+                <div class="feature-card text-center">
+                    <i class="fas fa-shipping-fast" style="font-size: 32px; color: var(--accent-color); margin-bottom: 20px;"></i>
+                    <h3>Free Delivery</h3>
+                    <p class="text-secondary">On all orders over $99. Fast and reliable.</p>
+                </div>
+                <div class="feature-card text-center">
+                    <i class="fas fa-shield-alt" style="font-size: 32px; color: var(--accent-color); margin-bottom: 20px;"></i>
+                    <h3>2-Year Warranty</h3>
+                    <p class="text-secondary">Peace of mind with every purchase.</p>
+                </div>
+                <div class="feature-card text-center">
+                    <i class="fas fa-headset" style="font-size: 32px; color: var(--accent-color); margin-bottom: 20px;"></i>
+                    <h3>24/7 Support</h3>
+                    <p class="text-secondary">Our experts are here to help you anytime.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="section" style="background: var(--bg-light);">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-end mb-4" style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 40px;">
+                <div>
+                    <h2 style="font-size: 32px;">Featured Products</h2>
+                    <p class="text-secondary">Explore our latest innovations</p>
+                </div>
+                <a href="shop.html" class="btn btn-secondary">View All</a>
+            </div>
+            
+            <div class="product-grid">
+                <!-- Product 1 -->
+                <div class="product-card">
+                    <div class="badge" style="position: absolute; top: 16px; left: 16px; background: var(--accent-color); color: white; padding: 4px 12px; border-radius: 20px; font-size: 10px; font-weight: 600;">NEW</div>
+                    <img src="../assets/images/product-iphone.webp" alt="iPhone 15 Pro" class="product-image">
+                    <div class="product-info">
+                        <span class="category">Smartphones</span>
+                        <h3>iPhone 15 Pro</h3>
+                        <p class="price">$999.00</p>
+                        <a href="product.html" class="btn btn-outline mt-2" style="width: 100%;">View Details</a>
+                    </div>
+                </div>
+                
+                <!-- Product 2 -->
+                <div class="product-card">
+                    <img src="../assets/images/product-watch.webp" alt="Apple Watch Series 9" class="product-image">
+                    <div class="product-info">
+                        <span class="category">Wearables</span>
+                        <h3>Apple Watch Series 9</h3>
+                        <p class="price">$399.00</p>
+                        <a href="product.html" class="btn btn-outline mt-2" style="width: 100%;">View Details</a>
+                    </div>
+                </div>
+                
+                <!-- Product 3 -->
+                <div class="product-card">
+                    <img src="../assets/images/product-headphones.webp" alt="AirPods Max" class="product-image">
+                    <div class="product-info">
+                        <span class="category">Audio</span>
+                        <h3>AirPods Max</h3>
+                        <p class="price">$549.00</p>
+                        <a href="product.html" class="btn btn-outline mt-2" style="width: 100%;">View Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter CTA -->
+    <section class="section" style="background: var(--primary-color); color: white;">
+        <div class="container text-center">
+            <h2 style="font-size: 32px; margin-bottom: 16px;">Get the latest from ElectroPremium.</h2>
+            <p style="opacity: 0.7; margin-bottom: 32px;">Sign up for our newsletter to receive updates on new arrivals and special offers.</p>
+            <form action="#" style="max-width: 500px; margin: 0 auto; display: flex; gap: 12px;">
+                <input type="email" placeholder="Email address" style="flex: 1; padding: 12px 20px; border-radius: 10px; border: none; font-size: 16px;">
+                <button type="submit" class="btn btn-primary" style="background: white; color: black;">Join</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="index.html" class="logo" style="margin-bottom: 24px; display: block;">
+                        <i class="fab fa-apple"></i> ElectroPremium
+                    </a>
+                    <p style="font-size: 13px; color: var(--text-secondary); max-width: 250px;">
+                        Leading the conversation in premium technology and minimalist design. Founded in 2024.
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h4>Shop</h4>
+                    <ul>
+                        <li><a href="shop.html">Laptops</a></li>
+                        <li><a href="shop.html">Smartphones</a></li>
+                        <li><a href="shop.html">Wearables</a></li>
+                        <li><a href="shop.html">Accessories</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="coming-soon.html">Repair Service</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Account</h4>
+                    <ul>
+                        <li><a href="user-dashboard.html">My Account</a></li>
+                        <li><a href="cart.html">Order Status</a></li>
+                        <li><a href="account.html">Login / Register</a></li>
+                        <li><a href="admin-dashboard.html">Admin Panel</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 ElectroPremium Inc. All rights reserved.</p>
+                <div style="display: flex; gap: 24px;">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Use</a>
+                    <a href="#">Sales Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>

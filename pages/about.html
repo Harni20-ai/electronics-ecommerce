@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | ElectroPremium</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/dark-mode.css">
+    
+    <style>
+        .about-hero {
+            padding: 160px 0;
+            background: #000;
+            color: white;
+            text-align: center;
+        }
+        
+        .about-hero h1 {
+            font-size: 72px;
+            letter-spacing: -3px;
+            margin-bottom: 24px;
+        }
+        
+        .story-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+            margin-top: 80px;
+        }
+        
+        .story-image {
+            width: 100%;
+            height: 600px;
+            background: #e5e5e5;
+            border-radius: 30px;
+            overflow: hidden;
+        }
+        
+        .stats-bar {
+            display: flex;
+            justify-content: space-around;
+            padding: 80px 0;
+            background: var(--bg-light);
+            margin-top: 120px;
+            border-radius: 40px;
+        }
+        
+        .stat-item text {
+            display: block;
+        }
+        
+        .stat-item .value {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+        
+        .stat-item .label {
+            color: var(--text-secondary);
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+        
+        @media (max-width: 900px) {
+            .about-hero h1 { font-size: 48px; }
+            .story-section { grid-template-columns: 1fr; gap: 40px; }
+            .story-image { height: 300px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header same as index -->
+    <header>
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <i class="fab fa-apple"></i> ElectroPremium
+            </a>
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="shop.html">Shop</a>
+                <a href="about.html" class="active">About</a>
+                <a href="contact.html">Contact</a>
+                <a href="account.html">Account</a>
+            </nav>
+            <div class="nav-actions">
+                <a href="#" id="theme-toggle"><i class="fas fa-moon"></i></a>
+                <a href="cart.html" class="cart-btn"><i class="fas fa-shopping-bag"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="about-hero">
+            <div class="container scale-up">
+                <h1>Innovation in every detail.</h1>
+                <p style="font-size: 24px; opacity: 0.7; max-width: 700px; margin: 0 auto;">We believe technology should be beautiful, powerful, and accessible to everyone who dreams of a better future.</p>
+            </div>
+        </section>
+
+        <div class="container">
+            <!-- Our Story -->
+            <section class="story-section section">
+                <div class="story-content">
+                    <span class="text-secondary" style="font-weight: 600; text-transform: uppercase; font-size: 12px;">Founded 2024</span>
+                    <h2 style="font-size: 40px; margin: 24px 0;">A legacy of excellence, built from the ground up.</h2>
+                    <p class="text-secondary" style="font-size: 18px; line-height: 1.8; margin-bottom: 24px;">
+                        ElectroPremium started with a simple idea: that electronics shouldn't just be tools, they should be works of art. We've spent years obsessing over the perfect curve, the fastest processor, and the most intuitive user experience.
+                    </p>
+                    <p class="text-secondary" style="font-size: 18px; line-height: 1.8;">
+                        Today, we are proud to serve millions of users around the world, providing them with the devices they need to create, connect, and explore. Our mission remains the same: to push the boundaries of what's possible.
+                    </p>
+                </div>
+                <div class="story-image">
+                    <img src="../assets/images/hero-macbook.webp" alt="Design Evolution" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+            </section>
+
+            <!-- Stats -->
+            <section class="stats-bar">
+                <div class="stat-item text-center">
+                    <div class="value">150+</div>
+                    <div class="label">Premium Products</div>
+                </div>
+                <div class="stat-item text-center">
+                    <div class="value">12M+</div>
+                    <div class="label">Happy Customers</div>
+                </div>
+                <div class="stat-item text-center">
+                    <div class="value">24h</div>
+                    <div class="label">Average Support Response</div>
+                </div>
+                <div class="stat-item text-center">
+                    <div class="value">98%</div>
+                    <div class="label">Satisfaction Rate</div>
+                </div>
+            </section>
+
+            <!-- Team / Vision -->
+            <section class="section text-center" style="padding: 120px 0;">
+                <h2 style="font-size: 48px; margin-bottom: 32px;">Our Vision</h2>
+                <p class="text-secondary" style="font-size: 20px; max-width: 800px; margin: 0 auto; line-height: 1.6;">
+                    "To create a world where technology and design exist in perfect harmony, empowering every individual to reach their full potential."
+                </p>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer style="background: var(--bg-light);">
+        <div class="container text-center" style="padding: 40px 0;">
+            <p style="font-size: 12px; color: var(--text-secondary);">&copy; 2024 ElectroPremium Inc. Built with passion in California.</p>
+        </div>
+    </footer>
+
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>

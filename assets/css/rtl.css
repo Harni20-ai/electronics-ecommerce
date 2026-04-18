@@ -1,0 +1,27 @@
+/* 
+    RTL Support for ElectroPremium
+    Applied when <html dir="rtl">
+*/
+
+[dir="rtl"] {
+    direction: rtl;
+    text-align: right;
+}
+
+[dir="rtl"] .nav-links {
+    margin-right: var(--space-4);
+    margin-left: 0;
+}
+
+[dir="rtl"] .btn i {
+    margin-left: 8px;
+    margin-right: 0;
+}
+
+[dir="rtl"] .product-card .price {
+    text-align: right;
+}
+
+[dir="rtl"] .footer-col {
+    text-align: right;
+}

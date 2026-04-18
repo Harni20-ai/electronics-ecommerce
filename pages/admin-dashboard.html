@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard | ElectroPremium</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/dark-mode.css">
+    
+    <style>
+        body {
+            background: #F5F5F7;
+            display: flex;
+            min-height: 100vh;
+        }
+        
+        /* Dashboard Layout */
+        .sidebar {
+            width: 260px;
+            background: white;
+            border-right: 1px solid var(--border-color);
+            padding: 32px 0;
+            display: flex;
+            flex-direction: column;
+            position: fixed;
+            height: 100vh;
+        }
+        
+        .main-content {
+            margin-left: 260px;
+            flex: 1;
+            padding: 40px;
+        }
+        
+        .logo-panel {
+            padding: 0 32px;
+            margin-bottom: 48px;
+        }
+        
+        .nav-menu {
+            flex: 1;
+        }
+        
+        .nav-item {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            padding: 16px 32px;
+            color: var(--text-secondary);
+            font-size: 15px;
+            transition: var(--transition);
+        }
+        
+        .nav-item:hover, .nav-item.active {
+            color: var(--accent-color);
+            background: rgba(0, 113, 227, 0.05);
+            border-right: 4px solid var(--accent-color);
+        }
+        
+        /* Stats Cards */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+            margin-bottom: 48px;
+        }
+        
+        .stat-card {
+            background: white;
+            padding: 24px;
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+        }
+        
+        .stat-card .label {
+            font-size: 13px;
+            color: var(--text-secondary);
+            margin-bottom: 8px;
+            display: block;
+        }
+        
+        .stat-card .value {
+            font-size: 28px;
+            font-weight: 700;
+        }
+        
+        .stat-card .trend {
+            font-size: 12px;
+            margin-top: 8px;
+            display: block;
+        }
+        
+        .trend.up { color: var(--success-color); }
+        .trend.down { color: var(--error-color); }
+        
+        /* Table Layout */
+        .data-table-container {
+            background: white;
+            border-radius: 20px;
+            padding: 32px;
+            box-shadow: var(--shadow);
+        }
+        
+        .data-table-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 24px;
+        }
+        
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        .data-table th {
+            text-align: left;
+            padding: 16px 0;
+            border-bottom: 2px solid var(--border-color);
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+        }
+        
+        .data-table td {
+            padding: 16px 0;
+            border-bottom: 1px solid var(--border-color);
+            font-size: 14px;
+        }
+        
+        .status-badge {
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 11px;
+            font-weight: 600;
+        }
+        
+        .status-badge.completed { background: #E8F5E9; color: #2E7D32; }
+        .status-badge.pending { background: #FFF3E0; color: #EF6C00; }
+        
+        @media (max-width: 1024px) {
+            .stats-grid { grid-template-columns: repeat(2, 1fr); }
+            .sidebar { width: 80px; }
+            .sidebar span { display: none; }
+            .main-content { margin-left: 80px; }
+            .logo-panel { padding: 0; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="logo-panel">
+            <a href="index.html" class="logo">
+                <i class="fab fa-apple"></i> <span>Admin</span>
+            </a>
+        </div>
+        
+        <nav class="nav-menu">
+            <a href="#" class="nav-item active">
+                <i class="fas fa-chart-line"></i> <span>Overview</span>
+            </a>
+            <a href="#" class="nav-item">
+                <i class="fas fa-box"></i> <span>Products</span>
+            </a>
+            <a href="#" class="nav-item">
+                <i class="fas fa-shopping-cart"></i> <span>Orders</span>
+            </a>
+            <a href="#" class="nav-item">
+                <i class="fas fa-users"></i> <span>Customers</span>
+            </a>
+            <a href="#" class="nav-item">
+                <i class="fas fa-bullhorn"></i> <span>Marketing</span>
+            </a>
+            <a href="#" class="nav-item">
+                <i class="fas fa-cog"></i> <span>Settings</span>
+            </a>
+        </nav>
+        
+        <div class="sidebar-footer" style="padding: 32px;">
+            <a href="#" class="nav-item" style="padding: 0;">
+                <i class="fas fa-sign-out-alt"></i> <span>Logout</span>
+            </a>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <header class="d-flex justify-content-between align-items-center" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 40px;">
+            <div>
+                <h1 style="font-size: 28px;">Hello, Admin</h1>
+                <p class="text-secondary">Here's what's happening with your store today.</p>
+            </div>
+            <div class="header-actions" style="display: flex; gap: 16px;">
+                <button class="btn btn-secondary"><i class="far fa-bell"></i></button>
+                <div class="user-avatar" style="width: 40px; height: 40px; background: var(--accent-color); border-radius: 50%; color: white; display: flex; align-items: center; justify-content: center; font-weight: 600;">A</div>
+            </div>
+        </header>
+
+        <!-- Stats Overview -->
+        <section class="stats-grid">
+            <div class="stat-card">
+                <span class="label">Total Revenue</span>
+                <div class="value">$128,430</div>
+                <span class="trend up"><i class="fas fa-arrow-up"></i> 12.5% vs last month</span>
+            </div>
+            <div class="stat-card">
+                <span class="label">Total Orders</span>
+                <div class="value">1,240</div>
+                <span class="trend up"><i class="fas fa-arrow-up"></i> 5.2% vs last month</span>
+            </div>
+            <div class="stat-card">
+                <span class="label">Active Users</span>
+                <div class="value">45,200</div>
+                <span class="trend up"><i class="fas fa-arrow-up"></i> 8.1% vs last month</span>
+            </div>
+            <div class="stat-card">
+                <span class="label">Conversion Rate</span>
+                <div class="value">3.24%</div>
+                <span class="trend down"><i class="fas fa-arrow-down"></i> 0.5% vs last month</span>
+            </div>
+        </section>
+
+        <!-- Recent Orders Table -->
+        <section class="data-table-container">
+            <div class="data-table-header">
+                <h3>Recent Orders</h3>
+                <button class="btn btn-outline" style="font-size: 13px;">Export CSV</button>
+            </div>
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>Order ID</th>
+                        <th>Customer</th>
+                        <th>Product</th>
+                        <th>Date</th>
+                        <th>Amount</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>#EP-8291</td>
+                        <td>James Wilson</td>
+                        <td>MacBook Pro 14"</td>
+                        <td>Apr 18, 2024</td>
+                        <td>$1,999.00</td>
+                        <td><span class="status-badge completed">Completed</span></td>
+                        <td><i class="fas fa-ellipsis-h" style="cursor: pointer;"></i></td>
+                    </tr>
+                    <tr>
+                        <td>#EP-8290</td>
+                        <td>Sarah Miller</td>
+                        <td>iPhone 15 Pro</td>
+                        <td>Apr 17, 2024</td>
+                        <td>$999.00</td>
+                        <td><span class="status-badge pending">Pending</span></td>
+                        <td><i class="fas fa-ellipsis-h" style="cursor: pointer;"></i></td>
+                    </tr>
+                    <tr>
+                        <td>#EP-8289</td>
+                        <td>Michael Brown</td>
+                        <td>Apple Watch S9</td>
+                        <td>Apr 17, 2024</td>
+                        <td>$399.00</td>
+                        <td><span class="status-badge completed">Completed</span></td>
+                        <td><i class="fas fa-ellipsis-h" style="cursor: pointer;"></i></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/dashboard.js"></script>
+</body>
+</html>

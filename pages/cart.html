@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Bag | ElectroPremium</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/dark-mode.css">
+    <link rel="stylesheet" href="../assets/css/rtl.css">
+    
+    <style>
+        .cart-grid {
+            display: grid;
+            grid-template-columns: 1fr 320px;
+            gap: 64px;
+            margin-top: 40px;
+        }
+        
+        .cart-item {
+            display: flex;
+            gap: 24px;
+            padding: 32px 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .cart-item-image {
+            width: 120px;
+            height: 120px;
+            background: var(--bg-light);
+            border-radius: 12px;
+            padding: 10px;
+        }
+        
+        .cart-item-info {
+            flex: 1;
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .cart-item-details h3 {
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+        
+        .cart-item-details p {
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+        
+        .quantity-control {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-top: 16px;
+        }
+        
+        .qty-btn {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            border: 1px solid var(--border-color);
+            background: transparent;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .summary-box {
+            background: var(--bg-light);
+            padding: 32px;
+            border-radius: 20px;
+            height: fit-content;
+            position: sticky;
+            top: 104px;
+        }
+        
+        .summary-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 16px;
+            font-size: 15px;
+        }
+        
+        .summary-total {
+            margin-top: 24px;
+            padding-top: 24px;
+            border-top: 1px solid var(--border-color);
+            font-weight: 600;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header>
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <i class="fab fa-apple"></i> ElectroPremium
+            </a>
+            <div class="nav-actions">
+                <a href="shop.html" style="font-size: 14px;">Continue Shopping</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="section">
+        <div class="container">
+            <h1 style="font-size: 40px; margin-bottom: 8px;">Review your bag.</h1>
+            <p class="text-secondary">Free delivery and free returns on all orders.</p>
+
+            <div class="cart-grid">
+                <!-- Cart Items List -->
+                <div class="cart-items">
+                    <div class="cart-item">
+                        <div class="cart-item-image">
+                            <img src="../assets/images/hero-macbook.webp" alt="MacBook Pro" style="width: 100%; height: auto;">
+                        </div>
+                        <div class="cart-item-info">
+                            <div class="cart-item-details">
+                                <h3>MacBook Pro 14" - Space Gray</h3>
+                                <p>Apple M3 Pro chip with 11-core CPU</p>
+                                <p>18GB Unified Memory</p>
+                                <div class="quantity-control">
+                                    <span>Quantity:</span>
+                                    <button class="qty-btn"><i class="fas fa-minus" style="font-size: 10px;"></i></button>
+                                    <span>1</span>
+                                    <button class="qty-btn"><i class="fas fa-plus" style="font-size: 10px;"></i></button>
+                                </div>
+                            </div>
+                            <div class="cart-item-price">
+                                <span style="font-weight: 500;">$1,999.00</span>
+                                <a href="#" style="display: block; margin-top: 12px; font-size: 12px; color: var(--accent-color);">Remove</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cart-item">
+                        <div class="cart-item-image">
+                            <img src="../assets/images/product-watch.webp" alt="Apple Watch" style="width: 100%; height: auto;">
+                        </div>
+                        <div class="cart-item-info">
+                            <div class="cart-item-details">
+                                <h3>Apple Watch Series 9</h3>
+                                <p>Midnight Aluminum Case with Sport Loop</p>
+                                <p>45mm</p>
+                                <div class="quantity-control">
+                                    <span>Quantity:</span>
+                                    <button class="qty-btn"><i class="fas fa-minus" style="font-size: 10px;"></i></button>
+                                    <span>1</span>
+                                    <button class="qty-btn"><i class="fas fa-plus" style="font-size: 10px;"></i></button>
+                                </div>
+                            </div>
+                            <div class="cart-item-price">
+                                <span style="font-weight: 500;">$399.00</span>
+                                <a href="#" style="display: block; margin-top: 12px; font-size: 12px; color: var(--accent-color);">Remove</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Order Summary -->
+                <aside class="summary-box">
+                    <h2 style="font-size: 20px; margin-bottom: 24px;">Order Summary</h2>
+                    <div class="summary-row">
+                        <span>Subtotal</span>
+                        <span>$2,398.00</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Shipping</span>
+                        <span style="color: var(--success-color);">FREE</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Estimated Tax</span>
+                        <span>$192.00</span>
+                    </div>
+                    <div class="summary-total summary-row">
+                        <span>Total</span>
+                        <span>$2,590.00</span>
+                    </div>
+                    <a href="checkout.html" class="btn btn-primary" style="width: 100%; margin-top: 32px; padding: 16px;">Check Out</a>
+                    
+                    <div style="margin-top: 24px; text-align: center;">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" alt="PayPal" style="height: 20px; margin-right: 12px; opacity: 0.6;">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Visa_Inc._logo.svg" alt="Visa" style="height: 12px; opacity: 0.6;">
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer style="background: white;">
+        <div class="container text-center" style="padding: 40px 0;">
+            <p style="font-size: 12px; color: var(--text-secondary);">&copy; 2024 ElectroPremium Inc. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>
