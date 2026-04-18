@@ -1,8 +1,8 @@
-import os
-import glob
-import re
+const fs = require('fs');
+const path = require('path');
+const pagesDir = path.join(__dirname, 'pages');
 
-css_code = """
+const cssCode = `
 /* Dropdown Menu Options */
 .nav-dropdown {
     position: relative;
@@ -48,32 +48,28 @@ css_code = """
     color: var(--primary-start) !important;
     padding-left: calc(var(--space-3) + 4px);
 }
-"""
+`;
 
-with open('d:/websites/electro-premium/assets/css/style.css', 'a', encoding='utf-8') as f:
-    f.write(css_code)
+// Append CSS
+fs.appendFileSync(path.join(__dirname, 'assets/css/style.css'), cssCode, 'utf8');
 
-html_files = glob.glob('d:/websites/electro-premium/pages/*.html')
-
-dropdown_html = """                <div class="nav-dropdown">
+const dropdownHtml = `                <div class="nav-dropdown">
                     <a href="#" style="cursor: pointer; display: flex; align-items: center;">Dashboards <i class="fas fa-chevron-down" style="font-size: 10px; margin-left: 6px;"></i></a>
                     <div class="dropdown-content">
                         <a href="user-dashboard.html">User Dashboard</a>
                         <a href="admin-dashboard.html">Admin Dashboard</a>
                     </div>
                 </div>
-"""
+`;
 
-for path in html_files:
-    with open(path, 'r', encoding='utf-8') as f:
-        content = f.read()
-
-    # ensure we only insert it once
-    if 'class="nav-dropdown"' not in content:
-        # We will insert it right before the closing </nav> tag
-        content = content.replace('            </nav>', dropdown_html + '            </nav>')
-        
-        with open(path, 'w', encoding='utf-8') as f:
-            f.write(content)
-
-print("Dropdown added successfully!")
+// Append HTML
+fs.readdirSync(pagesDir).filter(f => f.endsWith('.html')).forEach(file => {
+    const filePath = path.join(pagesDir, file);
+    let content = fs.readFileSync(filePath, 'utf8');
+    
+    if (!content.includes('class="nav-dropdown"')) {
+        content = content.replace('            </nav>', dropdownHtml + '            </nav>');
+        fs.writeFileSync(filePath, content, 'utf8');
+    }
+});
+console.log("Dropdown injected! (JS version)");
