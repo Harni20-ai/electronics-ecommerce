@@ -102,6 +102,9 @@
         .theme-toggle { position: absolute; top: 24px; right: 24px; background: var(--glass-bg); border: 1px solid var(--glass-border); color: var(--text-color); width: 44px; height: 44px; border-radius: 50%; cursor: pointer; backdrop-filter: blur(10px); display: flex; align-items: center; justify-content: center; font-size: 18px; transition: transform 0.2s; }
         .theme-toggle:hover { transform: scale(1.1); }
         
+        .rtl-toggle { position: absolute; top: 24px; right: 80px; background: var(--glass-bg); border: 1px solid var(--glass-border); color: var(--text-color); width: 44px; height: 44px; border-radius: 50%; cursor: pointer; backdrop-filter: blur(10px); display: flex; align-items: center; justify-content: center; font-size: 18px; transition: transform 0.2s; }
+        .rtl-toggle:hover { transform: scale(1.1); }
+        
         .back-nav { position: absolute; top: 24px; left: 24px; background: var(--glass-bg); border: 1px solid var(--glass-border); color: var(--text-color); padding: 10px 20px; border-radius: 50px; cursor: pointer; backdrop-filter: blur(10px); text-decoration: none; display: flex; align-items: center; gap: 8px; font-size: 14px; transition: transform 0.2s; font-weight: 500; }
         .back-nav:hover { transform: scale(1.05); }
 
@@ -109,13 +112,16 @@
             .login-card { padding: 32px 24px; }
             .header h1 { font-size: 24px; }
             .theme-toggle { top: 16px; right: 16px; }
+            .rtl-toggle { top: 16px; right: 68px; }
             .back-nav { top: 16px; left: 16px; padding: 8px 16px; }
         }
     </style>
+    <link rel="stylesheet" href="../assets/css/rtl.css">
 </head>
 <body>
     <a href="index.html" class="back-nav"><i class="fas fa-arrow-left"></i> Home</a>
     <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark mode"><i class="fas fa-moon"></i></button>
+    <button class="rtl-toggle" onclick="toggleRTL()" aria-label="Toggle right to left"><i class="fas fa-globe"></i></button>
 
     <div class="shape shape1"></div>
     <div class="shape shape2"></div>
@@ -173,6 +179,22 @@
             } else {
                 icon.classList.replace('fa-sun', 'fa-moon');
             }
+        }
+        
+        function toggleRTL() {
+            const currentlyRTL = document.documentElement.getAttribute('dir') === 'rtl';
+            if (currentlyRTL) {
+                document.documentElement.removeAttribute('dir');
+                localStorage.setItem('rtl_layout', 'false');
+            } else {
+                document.documentElement.setAttribute('dir', 'rtl');
+                localStorage.setItem('rtl_layout', 'true');
+            }
+        }
+
+        // Initialize RTL on load for login page
+        if(localStorage.getItem('rtl_layout') === 'true') {
+            document.documentElement.setAttribute('dir', 'rtl');
         }
     </script>
 </body>
