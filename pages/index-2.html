@@ -4,43 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home V2 | ElectroPremium</title>
-    <meta name="description" content="Experience the ultimate in premium electronics. From sleek laptops to high-end smartphones, ElectroPremium brings you the future of technology today.">
-    
     <!-- Open Graph / SEO -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="ElectroPremium | Premium Electronics Store">
     <meta property="og:description" content="Minimalist, high-performance electronics for the modern professional.">
-    
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
     <!-- Stylesheets -->
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/dark-mode.css">
     <link rel="stylesheet" href="../assets/css/rtl.css">
-    
-    <!-- Structured Data (JSON-LD) -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "ElectronicsStore",
-      "name": "ElectroPremium",
-      "description": "Premium electronics store with Apple-inspired design.",
-      "url": "https://electropremium.com",
-      "telephone": "+1800-ELECTRO",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "123 Tech Avenue",
-        "addressLocality": "Cupertino",
-        "addressRegion": "CA",
-        "postalCode": "95014",
-        "addressCountry": "US"
-      }
-    }
-    </script>
 </head>
 <body>
 
@@ -80,105 +54,88 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container">
-            <h1 class="animate-up">Think Beyond.</h1>
-            <p class="animate-up" style="animation-delay: 0.1s;">The all-new MacBook Pro. Supercharged by M3.</p>
-            <div class="hero-cta animate-up" style="animation-delay: 0.2s;">
-                <a href="product.html" class="btn btn-primary">Learn more</a>
-                <a href="shop.html" class="btn btn-outline" style="margin-left: 16px;">Buy</a>
-            </div>
-            <div class="hero-image-container mt-4 animate-up" style="animation-delay: 0.3s;">
-                <img src="../assets/images/hero-macbook.webp" alt="MacBook Pro M3" style="width: 100%; max-width: 900px; border-radius: 20px;">
-            </div>
-        </div>
-    </section>
-
-    <!-- Key Selling Points -->
-    <section class="section" style="background: var(--surface-white);">
-        <div class="container">
-            <div class="section-title text-center mb-5">
-                <h2 style="font-size: 40px; margin-bottom: 40px;">Why ElectroPremium?</h2>
-            </div>
-            <div class="grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 40px;">
-                <div class="feature-card text-center">
-                    <i class="fas fa-shipping-fast" style="font-size: 32px; color: var(--primary-start); margin-bottom: 20px;"></i>
-                    <h3>Free Delivery</h3>
-                    <p class="text-secondary">On all orders over $99. Fast and reliable.</p>
+    <!-- NEW HERO V2 -->
+    <section class="hero" style="padding: 60px 0;">
+        <div class="container hero-split">
+            <div class="hero-split-text animate-up">
+                <div class="badge" style="background: rgba(106, 17, 203, 0.1); color: var(--primary-start); padding: 8px 16px; border-radius: 30px; font-size: 12px; font-weight: 700; display: inline-block; margin-bottom: 20px;">V2 BETA LAUNCH</div>
+                <h1 style="font-size: 68px; text-align: left; margin-left: 0;">Beyond <br/><span style="background: var(--gradient-secondary); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Boundaries.</span></h1>
+                <p style="text-align: left; margin-left: 0;">Experience technology uniquely engineered for your creative workflow and modern lifestyle.</p>
+                <div class="hero-cta" style="margin-top: 40px; text-align: left;">
+                    <a href="shop.html" class="btn btn-primary" style="padding: 16px 32px; font-size: 16px;">Explore Collection</a>
+                    <a href="#video" class="btn btn-secondary" style="margin-left: 16px; border-radius: 50%; width: 54px; height: 54px; padding: 0;"><i class="fas fa-play" style="margin-left: 3px;"></i></a>
                 </div>
-                <div class="feature-card text-center">
-                    <i class="fas fa-shield-alt" style="font-size: 32px; color: var(--primary-start); margin-bottom: 20px;"></i>
-                    <h3>2-Year Warranty</h3>
-                    <p class="text-secondary">Peace of mind with every purchase.</p>
-                </div>
-                <div class="feature-card text-center">
-                    <i class="fas fa-headset" style="font-size: 32px; color: var(--primary-start); margin-bottom: 20px;"></i>
-                    <h3>24/7 Support</h3>
-                    <p class="text-secondary">Our experts are here to help you anytime.</p>
-                </div>
+            </div>
+            <div class="hero-split-image animate-up" style="animation-delay: 0.2s;">
+                <img src="../assets/images/product-iphone.webp" alt="Flagship Device" style="background: white; border-radius: 40px; padding: 40px; border: 1px solid rgba(255,255,255,0.8);">
             </div>
         </div>
     </section>
 
-    <!-- Featured Products -->
-    <section class="section" id="deals" style="background: var(--bg-light);">
-        <div class="container">
-            <div class="d-flex justify-content-between align-items-end mb-4" style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 40px;">
-                <div>
-                    <h2 style="font-size: 32px;">Featured Products</h2>
-                    <p class="text-secondary">Explore our latest innovations</p>
-                </div>
-                <a href="shop.html" class="btn btn-secondary">View All</a>
-            </div>
-            
-            <div class="product-grid">
-                <!-- Product 1 -->
-                <div class="product-card">
-                    <div class="badge" style="position: absolute; top: 16px; left: 16px; background: var(--primary-start); color: white; padding: 4px 12px; border-radius: 20px; font-size: 10px; font-weight: 600;">NEW</div>
-                    <img src="../assets/images/product-iphone.webp" alt="iPhone 15 Pro" class="product-image">
-                    <div class="product-info">
-                        <span class="category">Smartphones</span>
-                        <h3>iPhone 15 Pro</h3>
-                        <p class="price">$999.00</p>
-                        <a href="product.html" class="btn btn-outline mt-2" style="width: 100%;">View Details</a>
-                    </div>
-                </div>
-                
-                <!-- Product 2 -->
-                <div class="product-card">
-                    <img src="../assets/images/product-watch.webp" alt="Apple Watch Series 9" class="product-image">
-                    <div class="product-info">
-                        <span class="category">Wearables</span>
-                        <h3>Apple Watch Series 9</h3>
-                        <p class="price">$399.00</p>
-                        <a href="product.html" class="btn btn-outline mt-2" style="width: 100%;">View Details</a>
-                    </div>
-                </div>
-                
-                <!-- Product 3 -->
-                <div class="product-card">
-                    <img src="../assets/images/product-headphones.webp" alt="AirPods Max" class="product-image">
-                    <div class="product-info">
-                        <span class="category">Audio</span>
-                        <h3>AirPods Max</h3>
-                        <p class="price">$549.00</p>
-                        <a href="product.html" class="btn btn-outline mt-2" style="width: 100%;">View Details</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Newsletter CTA -->
-    <section class="section" style="background: var(--primary-color); color: white;">
+    <!-- Circular Categories -->
+    <section class="section" style="padding-top: 0;">
         <div class="container text-center">
-            <h2 style="font-size: 32px; margin-bottom: 16px;">Get the latest from ElectroPremium.</h2>
-            <p style="opacity: 0.7; margin-bottom: 32px;">Sign up for our newsletter to receive updates on new arrivals and special offers.</p>
-            <form action="#" style="max-width: 500px; margin: 0 auto; display: flex; gap: 12px;">
-                <input type="email" placeholder="Email address" style="flex: 1; padding: 12px 20px; border-radius: 10px; border: none; font-size: 16px;">
-                <button type="submit" class="btn btn-primary" style="background: var(--surface-white); color: black;">Join</button>
-            </form>
+            <h3 style="color: var(--text-secondary); font-size: 14px; text-transform: uppercase; letter-spacing: 2px;">Shop by Category</h3>
+            <div class="category-circles">
+                <a href="shop.html#phones" class="cat-circle">
+                    <i class="fas fa-mobile-alt"></i>
+                    <span>Phones</span>
+                </a>
+                <a href="shop.html#laptops" class="cat-circle">
+                    <i class="fas fa-laptop"></i>
+                    <span>Laptops</span>
+                </a>
+                <a href="shop.html#watches" class="cat-circle">
+                    <i class="far fa-clock"></i>
+                    <span>Watches</span>
+                </a>
+                <a href="shop.html#audio" class="cat-circle">
+                    <i class="fas fa-headphones-alt"></i>
+                    <span>Audio</span>
+                </a>
+                <a href="shop.html#accessories" class="cat-circle">
+                    <i class="fas fa-plug"></i>
+                    <span>Extras</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Asymmetrical Grid -->
+    <section class="section" style="background: var(--bg-light);">
+        <div class="container">
+            <h2 style="font-size: 40px; margin-bottom: 40px;">Featured Innovation</h2>
+            <div class="asymmetrical-grid">
+                <!-- Massive Hero Product -->
+                <div class="card asym-featured" style="display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; background: linear-gradient(135deg, rgba(255,255,255,1), rgba(245,247,251,1));">
+                    <div class="badge" style="background: var(--error-color); color: white; padding: 8px 24px; border-radius: 30px; font-weight: 700; position: absolute; top: 32px; left: 32px;">HOT SELLER</div>
+                    <img src="../assets/images/hero-macbook.webp" alt="MacBook Pro" style="width: 90%; max-width: 500px; margin: 40px 0; filter: drop-shadow(0 20px 40px rgba(0,0,0,0.1));">
+                    <h3 style="font-size: 32px; margin-bottom: 8px;">MacBook Pro 14"</h3>
+                    <p class="text-secondary" style="font-size: 18px; margin-bottom: 24px;">M3 Max chip. 36GB Unified Memory.</p>
+                    <p class="price" style="font-size: 28px; font-weight: 800; color: var(--primary-start); margin-bottom: 32px;">$1,999.00</p>
+                    <a href="product.html" class="btn btn-primary" style="width: 80%; max-width: 300px;">Buy Now</a>
+                </div>
+                
+                <div class="card asym-item text-center">
+                    <img src="../assets/images/product-watch.webp" alt="Watch" style="height: 180px; object-fit: contain; margin: 20px auto;">
+                    <h3>Apple Watch S9</h3>
+                    <p class="price" style="font-weight: 700; color: var(--primary-start);">$399</p>
+                </div>
+                <div class="card asym-item text-center">
+                    <img src="../assets/images/product-headphones.webp" alt="AirPods" style="height: 180px; object-fit: contain; margin: 20px auto;">
+                    <h3>AirPods Max</h3>
+                    <p class="price" style="font-weight: 700; color: var(--primary-start);">$549</p>
+                </div>
+                <!-- Spanning smaller item below them -->
+                <div class="card asym-item text-center" style="grid-column: 2 / 4; display: flex; flex-direction: row; align-items: center; justify-content: space-around; text-align: left;">
+                    <div style="max-width: 200px;">
+                        <span style="color: var(--text-secondary); font-size: 12px; font-weight: 700; letter-spacing: 1px;">CLEARANCE</span>
+                        <h3 style="font-size: 24px;">Accessories</h3>
+                        <a href="shop.html" class="btn btn-outline mt-2" style="padding: 8px 16px; font-size: 13px;">View All</a>
+                    </div>
+                    <i class="fas fa-magic" style="font-size: 80px; color: var(--bg-light);"></i>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -194,6 +151,7 @@
                         Leading the conversation in premium technology and minimalist design. Founded in 2024.
                     </p>
                 </div>
+                <!-- Reusing standard footer format from v1 -->
                 <div class="footer-col">
                     <h4>Shop</h4>
                     <ul>
@@ -224,11 +182,6 @@
             </div>
             <div class="footer-bottom">
                 <p>&copy; 2024 ElectroPremium Inc. All rights reserved.</p>
-                <div style="display: flex; gap: 24px;">
-                    <a href="#">Privacy Policy</a>
-                    <a href="#">Terms of Use</a>
-                    <a href="#">Sales Policy</a>
-                </div>
             </div>
         </div>
     </footer>
