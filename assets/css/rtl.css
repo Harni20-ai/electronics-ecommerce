@@ -25,3 +25,29 @@
 [dir="rtl"] .footer-col {
     text-align: right;
 }
+
+/* Admin Dashboard Overrides */
+[dir="rtl"] .sidebar {
+    right: 0;
+    left: auto;
+    border-left: 1px solid var(--border-color);
+    border-right: none;
+}
+
+[dir="rtl"] .main-content {
+    margin-right: 260px;
+    margin-left: 0;
+}
+
+/* User Dashboard Overrides */
+[dir="rtl"] .user-dashboard-grid {
+    direction: rtl;
+}
+
+[dir="rtl"] .order-row {
+    flex-direction: row;
+}
+
+[dir="rtl"] .dashboard-card {
+    text-align: right;
+}
