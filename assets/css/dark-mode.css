@@ -68,3 +68,43 @@
 [data-theme='dark'] .nav-links {
     background: rgba(30, 41, 59, 0.95);
 }
+
+/* Dashboard Specific Fixes */
+[data-theme='dark'] .sidebar,
+[data-theme='dark'] .stat-card,
+[data-theme='dark'] .data-table-container,
+[data-theme='dark'] .profile-sidebar,
+[data-theme='dark'] .auth-box {
+    background: var(--surface-white);
+    border-color: rgba(255, 255, 255, 0.05);
+}
+
+[data-theme='dark'] .data-table th,
+[data-theme='dark'] .data-table td,
+[data-theme='dark'] .nav-item {
+    color: var(--text-primary);
+    border-color: rgba(255, 255, 255, 0.05);
+}
+
+[data-theme='dark'] .nav-item:hover, 
+[data-theme='dark'] .nav-item.active {
+    background: rgba(106, 17, 203, 0.1);
+}
+
+[data-theme='dark'] .sidebar {
+    background: var(--bg-light);
+    border-color: rgba(255, 255, 255, 0.05);
+}
+
+[data-theme='dark'] .stat-card .value,
+[data-theme='dark'] .stat-card .label,
+[data-theme='dark'] h1, 
+[data-theme='dark'] h2, 
+[data-theme='dark'] h3 {
+    color: var(--text-primary);
+}
+
+[data-theme='dark'] .text-secondary,
+[data-theme='dark'] p.text-secondary {
+    color: var(--text-secondary) !important;
+}
